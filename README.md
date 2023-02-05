@@ -1,5 +1,5 @@
 # Prova Finale Ingegneria del Software 2022
-## Gruppo GC12
+## About
 
 Implementation of the Eriantys board game.
 
@@ -9,17 +9,19 @@ The network is managed with the use of sockets.
 
 Interaction and gameplay: command line (CLI) and graphics (GUI).
 
+Final Score: 30/30
+
 ## Documentation
 
 ### UML
-- [Initial UML](https://github.com/LorenzoPaleari/ing-sw-2022-Paci-Paleari-Puppinato/tree/main/Deliverables/UML/Initial)
-- [Final UML](https://github.com/LorenzoPaleari/ing-sw-2022-Paci-Paleari-Puppinato/tree/main/Deliverables/UML/Final)
+- [Initial UML](https://github.com/emanuelePaci/SoftEng_Eriantys/tree/main/Deliverables/UML/Initial)
+- [Final UML](https://github.com/emanuelePaci/SoftEng_Eriantys/tree/main/Deliverables/UML/Final)
 
 ### JavaDoc
-The following documentation includes a description of the classes and methods used, which can be found [here](https://github.com/LorenzoPaleari/ing-sw-2022-Paci-Paleari-Puppinato/tree/main/Deliverables/Code%20Coverage).
+The following documentation includes a description of the classes and methods used, which can be found [here](https://github.com/emanuelePaci/SoftEng_Eriantys/tree/main/Deliverables/Code%20Coverage).
 
 ### Coverage report
-At the following [link](https://github.com/LorenzoPaleari/ing-sw-2022-Paci-Paleari-Puppinato/tree/main/Deliverables/Code%20Coverage) you can consult the coverage report of the tests carried out with Junit.
+At the following [link](https://github.com/emanuelePaci/SoftEng_Eriantys/tree/main/Deliverables/Code%20Coverage) you can consult the coverage report of the tests carried out with Junit.
 
 
 
@@ -52,7 +54,7 @@ At the following [link](https://github.com/LorenzoPaleari/ing-sw-2022-Paci-Palea
 ## Jar execution
 In order to run correctly you should have JDK 17 or above. [Here](https://www.oracle.com/java/technologies/downloads/#java17) you can find the download page.  
 The user has two jars available, one for the server and one for the client.
-You can find them [here](https://github.com/LorenzoPaleari/ing-sw-2022-Paci-Paleari-Puppinato/tree/main/Deliverables/JAR).
+You can find them [here](https://github.com/emanuelePaci/SoftEng_Eriantys/tree/main/Deliverables/JAR).
 ### Server
 The server jar can be executed either in Windows and Unix platforms with the following command:
 ```
@@ -107,6 +109,6 @@ Some of the Characters are playable instantly, other ones requires the player to
 
 
 ## About us
-- ###        Paci Emanuele ([@emanuelePaci](https://github.com/emanuelePaci))
-- ###        Paleari Lorenzo ([@LorenzoPaleari](https://github.com/LorenzoPaleari))
-- ###        Puppinato Thomas ([@PuppinatoThomas](https://github.com/PuppinatoThomas))
+* Paci Emanuele ([@emanuelePaci](https://github.com/emanuelePaci))
+* Paleari Lorenzo ([@LorenzoPaleari](https://github.com/LorenzoPaleari))
+* Puppinato Thomas ([@PuppinatoThomas](https://github.com/PuppinatoThomas))
