@@ -1,0 +1,255 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <title>Coverage Report > DiningRoom</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/highlight-idea.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">it.polimi.ingsw.model.board</a>
+</div>
+
+<h1>Coverage Summary for Class: DiningRoom (it.polimi.ingsw.model.board)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">DiningRoom</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (13/13)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (37/37)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<div class="sourceCode" id="sourceCode"><i class="no-highlight">1</i>&nbsp;package it.polimi.ingsw.model.board;
+<i class="no-highlight">2</i>&nbsp;
+<i class="no-highlight">3</i>&nbsp;import it.polimi.ingsw.listeners.ModelListener;
+<i class="no-highlight">4</i>&nbsp;import it.polimi.ingsw.model.enumerations.PawnColor;
+<i class="no-highlight">5</i>&nbsp;import it.polimi.ingsw.model.pawns.Student;
+<i class="no-highlight">6</i>&nbsp;
+<i class="no-highlight">7</i>&nbsp;import java.util.LinkedList;
+<i class="no-highlight">8</i>&nbsp;import java.util.List;
+<i class="no-highlight">9</i>&nbsp;
+<i class="no-highlight">10</i>&nbsp;/**
+<i class="no-highlight">11</i>&nbsp; * Diningroom class
+<i class="no-highlight">12</i>&nbsp; */
+<i class="no-highlight">13</i>&nbsp;public class DiningRoom {
+<i class="no-highlight">14</i>&nbsp;    private LinkedList&lt;Student&gt; student;
+<i class="no-highlight">15</i>&nbsp;    private ModelListener modelListener;
+<i class="no-highlight">16</i>&nbsp;    private boolean listen;
+<i class="no-highlight">17</i>&nbsp;
+<i class="no-highlight">18</i>&nbsp;    /**
+<i class="no-highlight">19</i>&nbsp;     * Constructor
+<i class="no-highlight">20</i>&nbsp;     * Initialize the student list
+<i class="no-highlight">21</i>&nbsp;     */
+<b class="fc"><i class="no-highlight">22</i>&nbsp;    public DiningRoom() {</b>
+<b class="fc"><i class="no-highlight">23</i>&nbsp;        student = new LinkedList&lt;&gt;();</b>
+<b class="fc"><i class="no-highlight">24</i>&nbsp;        listen = false;</b>
+<i class="no-highlight">25</i>&nbsp;    }
+<i class="no-highlight">26</i>&nbsp;
+<i class="no-highlight">27</i>&nbsp;    /**
+<i class="no-highlight">28</i>&nbsp;     * gets the students list
+<i class="no-highlight">29</i>&nbsp;     * @return the students list
+<i class="no-highlight">30</i>&nbsp;     */
+<i class="no-highlight">31</i>&nbsp;    public LinkedList&lt;Student&gt; getStudent() {
+<b class="fc"><i class="no-highlight">32</i>&nbsp;        return student;</b>
+<i class="no-highlight">33</i>&nbsp;    }
+<i class="no-highlight">34</i>&nbsp;
+<i class="no-highlight">35</i>&nbsp;    /**
+<i class="no-highlight">36</i>&nbsp;     * Removes numstudent of the color indicated from the list
+<i class="no-highlight">37</i>&nbsp;     * @param color the color of the student to be removed
+<i class="no-highlight">38</i>&nbsp;     * @param numStudent the number of students to be removed
+<i class="no-highlight">39</i>&nbsp;     * @return the removed students
+<i class="no-highlight">40</i>&nbsp;     */
+<i class="no-highlight">41</i>&nbsp;    public List&lt;Student&gt; removeStudent(PawnColor color, int numStudent){
+<b class="fc"><i class="no-highlight">42</i>&nbsp;        List&lt;Student&gt; list = new LinkedList&lt;&gt;();</b>
+<i class="no-highlight">43</i>&nbsp;        Student temp;
+<b class="fc"><i class="no-highlight">44</i>&nbsp;        for(int i = 0; i &lt; numStudent; i++){</b>
+<b class="fc"><i class="no-highlight">45</i>&nbsp;            temp = find(color);</b>
+<b class="fc"><i class="no-highlight">46</i>&nbsp;            if(temp != null)</b>
+<b class="fc"><i class="no-highlight">47</i>&nbsp;                list.add(temp);</b>
+<i class="no-highlight">48</i>&nbsp;        }
+<b class="fc"><i class="no-highlight">49</i>&nbsp;        student.removeAll(list);</b>
+<b class="fc"><i class="no-highlight">50</i>&nbsp;        return list;</b>
+<i class="no-highlight">51</i>&nbsp;    }
+<i class="no-highlight">52</i>&nbsp;
+<i class="no-highlight">53</i>&nbsp;    /**
+<i class="no-highlight">54</i>&nbsp;     * adds a student to the list
+<i class="no-highlight">55</i>&nbsp;     * @param s the new student
+<i class="no-highlight">56</i>&nbsp;     */
+<i class="no-highlight">57</i>&nbsp;    public void addStudent(Student s){
+<b class="fc"><i class="no-highlight">58</i>&nbsp;        student.addLast(s);</b>
+<b class="fc"><i class="no-highlight">59</i>&nbsp;        notifyView();</b>
+<i class="no-highlight">60</i>&nbsp;    }
+<i class="no-highlight">61</i>&nbsp;
+<i class="no-highlight">62</i>&nbsp;    /**
+<i class="no-highlight">63</i>&nbsp;     * adds a list of students to the list
+<i class="no-highlight">64</i>&nbsp;     * @param s the list of students
+<i class="no-highlight">65</i>&nbsp;     */
+<i class="no-highlight">66</i>&nbsp;    public void addStudent(List&lt;Student&gt; s){
+<b class="fc"><i class="no-highlight">67</i>&nbsp;        student.addAll(s);</b>
+<i class="no-highlight">68</i>&nbsp;    }
+<i class="no-highlight">69</i>&nbsp;
+<i class="no-highlight">70</i>&nbsp;    /**
+<i class="no-highlight">71</i>&nbsp;     * returns true if the student list is empty
+<i class="no-highlight">72</i>&nbsp;     * @return true if the student list is empty
+<i class="no-highlight">73</i>&nbsp;     */
+<i class="no-highlight">74</i>&nbsp;    public boolean isEmpty(){
+<b class="fc"><i class="no-highlight">75</i>&nbsp;        return student.size() == 0;</b>
+<i class="no-highlight">76</i>&nbsp;    }
+<i class="no-highlight">77</i>&nbsp;
+<i class="no-highlight">78</i>&nbsp;    /**
+<i class="no-highlight">79</i>&nbsp;     * returns a student of the indicated color
+<i class="no-highlight">80</i>&nbsp;     * @param color the color of the student to be found
+<i class="no-highlight">81</i>&nbsp;     * @return the student found
+<i class="no-highlight">82</i>&nbsp;     */
+<i class="no-highlight">83</i>&nbsp;    public Student find(PawnColor color){
+<i class="no-highlight">84</i>&nbsp;        Student temp;
+<b class="fc"><i class="no-highlight">85</i>&nbsp;        for(Student s : student)</b>
+<b class="fc"><i class="no-highlight">86</i>&nbsp;            if(s.getColor() == color){</b>
+<b class="fc"><i class="no-highlight">87</i>&nbsp;                temp = s;</b>
+<b class="fc"><i class="no-highlight">88</i>&nbsp;                student.remove(s);</b>
+<b class="fc"><i class="no-highlight">89</i>&nbsp;                return temp;</b>
+<i class="no-highlight">90</i>&nbsp;            }
+<b class="fc"><i class="no-highlight">91</i>&nbsp;        return null;</b>
+<i class="no-highlight">92</i>&nbsp;    }
+<i class="no-highlight">93</i>&nbsp;
+<i class="no-highlight">94</i>&nbsp;    /**
+<i class="no-highlight">95</i>&nbsp;     * counts the students of the indicated color
+<i class="no-highlight">96</i>&nbsp;     * @param c the color
+<i class="no-highlight">97</i>&nbsp;     * @return the number of student of that color
+<i class="no-highlight">98</i>&nbsp;     */
+<i class="no-highlight">99</i>&nbsp;    public int count(PawnColor c){
+<b class="fc"><i class="no-highlight">100</i>&nbsp;        int count = 0;</b>
+<b class="fc"><i class="no-highlight">101</i>&nbsp;        for(Student s : student){</b>
+<b class="fc"><i class="no-highlight">102</i>&nbsp;            if(s.getColor() == c){</b>
+<b class="fc"><i class="no-highlight">103</i>&nbsp;                count++;</b>
+<i class="no-highlight">104</i>&nbsp;            }
+<b class="fc"><i class="no-highlight">105</i>&nbsp;        }</b>
+<b class="fc"><i class="no-highlight">106</i>&nbsp;        return count;</b>
+<i class="no-highlight">107</i>&nbsp;    }
+<i class="no-highlight">108</i>&nbsp;
+<i class="no-highlight">109</i>&nbsp;    /**
+<i class="no-highlight">110</i>&nbsp;     * returns a list with the count of all the students
+<i class="no-highlight">111</i>&nbsp;     * @return list with the count of all the students
+<i class="no-highlight">112</i>&nbsp;     */
+<i class="no-highlight">113</i>&nbsp;    public Integer[] countAll() {
+<b class="fc"><i class="no-highlight">114</i>&nbsp;        Integer[] colorsCount = new Integer[5];</b>
+<i class="no-highlight">115</i>&nbsp;
+<b class="fc"><i class="no-highlight">116</i>&nbsp;        for (PawnColor p : PawnColor.values())</b>
+<b class="fc"><i class="no-highlight">117</i>&nbsp;            colorsCount[p.getIndex()] = count(p);</b>
+<i class="no-highlight">118</i>&nbsp;
+<b class="fc"><i class="no-highlight">119</i>&nbsp;        return colorsCount;</b>
+<i class="no-highlight">120</i>&nbsp;    }
+<i class="no-highlight">121</i>&nbsp;
+<i class="no-highlight">122</i>&nbsp;    /**
+<i class="no-highlight">123</i>&nbsp;     * attach the model listener
+<i class="no-highlight">124</i>&nbsp;     * @param modelListener the model listener to be attached
+<i class="no-highlight">125</i>&nbsp;     */
+<i class="no-highlight">126</i>&nbsp;    public void attach(ModelListener modelListener){
+<b class="fc"><i class="no-highlight">127</i>&nbsp;        this.modelListener=modelListener;</b>
+<b class="fc"><i class="no-highlight">128</i>&nbsp;        listen = true;</b>
+<i class="no-highlight">129</i>&nbsp;    }
+<i class="no-highlight">130</i>&nbsp;
+<i class="no-highlight">131</i>&nbsp;    /**
+<i class="no-highlight">132</i>&nbsp;     * notify thw view
+<i class="no-highlight">133</i>&nbsp;     */
+<i class="no-highlight">134</i>&nbsp;    public void notifyView() {
+<b class="fc"><i class="no-highlight">135</i>&nbsp;        if (listen)</b>
+<b class="fc"><i class="no-highlight">136</i>&nbsp;            modelListener.update();</b>
+<i class="no-highlight">137</i>&nbsp;    }
+<i class="no-highlight">138</i>&nbsp;
+<i class="no-highlight">139</i>&nbsp;    /**
+<i class="no-highlight">140</i>&nbsp;     * detach sets the listen to false
+<i class="no-highlight">141</i>&nbsp;     */
+<i class="no-highlight">142</i>&nbsp;    public void detach(){
+<b class="fc"><i class="no-highlight">143</i>&nbsp;        listen=false;</b>
+<i class="no-highlight">144</i>&nbsp;    }
+<i class="no-highlight">145</i>&nbsp;
+<i class="no-highlight">146</i>&nbsp;    /**
+<i class="no-highlight">147</i>&nbsp;     * reattach sets the listen to true
+<i class="no-highlight">148</i>&nbsp;     */
+<b class="fc"><i class="no-highlight">149</i>&nbsp;    public void reattach(){listen = true;}</b>
+<i class="no-highlight">150</i>&nbsp;}
+</div>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+        var codeBlock = document.getElementById('sourceCode');
+
+        if (codeBlock) {
+            hljs.highlightBlock(codeBlock);
+        }
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2022-06-30 18:43</div>
+</div>
+</body>
+</html>

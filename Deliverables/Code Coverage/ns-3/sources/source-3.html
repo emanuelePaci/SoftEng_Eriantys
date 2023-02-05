@@ -1,0 +1,146 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <title>Coverage Report > MotherNatureStrategyStandard</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/highlight-idea.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">it.polimi.ingsw.controller.motherNatureStrategy</a>
+</div>
+
+<h1>Coverage Summary for Class: MotherNatureStrategyStandard (it.polimi.ingsw.controller.motherNatureStrategy)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">MotherNatureStrategyStandard</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (2/2)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (8/8)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<div class="sourceCode" id="sourceCode"><i class="no-highlight">1</i>&nbsp;package it.polimi.ingsw.controller.motherNatureStrategy;
+<i class="no-highlight">2</i>&nbsp;
+<i class="no-highlight">3</i>&nbsp;import it.polimi.ingsw.exceptions.ClientException;
+<i class="no-highlight">4</i>&nbsp;import it.polimi.ingsw.exceptions.ErrorType;
+<i class="no-highlight">5</i>&nbsp;import it.polimi.ingsw.model.player.Player;
+<i class="no-highlight">6</i>&nbsp;import it.polimi.ingsw.model.table.Table;
+<i class="no-highlight">7</i>&nbsp;
+<i class="no-highlight">8</i>&nbsp;/**
+<i class="no-highlight">9</i>&nbsp; * Mother Nature Strategy Standard class
+<i class="no-highlight">10</i>&nbsp; */
+<i class="no-highlight">11</i>&nbsp;public class MotherNatureStrategyStandard implements MotherNatureStrategy {
+<i class="no-highlight">12</i>&nbsp;    /**
+<i class="no-highlight">13</i>&nbsp;     * Constructor
+<i class="no-highlight">14</i>&nbsp;     */
+<b class="fc"><i class="no-highlight">15</i>&nbsp;    public MotherNatureStrategyStandard(){</b>
+<i class="no-highlight">16</i>&nbsp;
+<i class="no-highlight">17</i>&nbsp;    }
+<i class="no-highlight">18</i>&nbsp;    /**
+<i class="no-highlight">19</i>&nbsp;     * checks mother nature movements
+<i class="no-highlight">20</i>&nbsp;     * @param table the current table
+<i class="no-highlight">21</i>&nbsp;     * @param endPosition the end mother nature position
+<i class="no-highlight">22</i>&nbsp;     * @param player the current player
+<i class="no-highlight">23</i>&nbsp;     * @return num moves
+<i class="no-highlight">24</i>&nbsp;     * @throws ClientException if there are problems
+<i class="no-highlight">25</i>&nbsp;     */
+<i class="no-highlight">26</i>&nbsp;    public int checkMotherNature(Table table, int endPosition, Player player) throws ClientException {
+<i class="no-highlight">27</i>&nbsp;        int numMoves;
+<i class="no-highlight">28</i>&nbsp;
+<b class="fc"><i class="no-highlight">29</i>&nbsp;        int initPosition = table.getMotherPosition();</b>
+<b class="fc"><i class="no-highlight">30</i>&nbsp;        if (endPosition &lt;= initPosition)</b>
+<b class="fc"><i class="no-highlight">31</i>&nbsp;            numMoves = table.getNumIsland() + endPosition - initPosition;</b>
+<i class="no-highlight">32</i>&nbsp;        else
+<b class="fc"><i class="no-highlight">33</i>&nbsp;            numMoves = endPosition - initPosition;</b>
+<i class="no-highlight">34</i>&nbsp;
+<b class="fc"><i class="no-highlight">35</i>&nbsp;        if (player.getLastUsed() == null || numMoves &gt; player.getLastUsed().getNumMovement())</b>
+<b class="fc"><i class="no-highlight">36</i>&nbsp;            throw new ClientException(ErrorType.TOO_MUCH_MOVES);</b>
+<i class="no-highlight">37</i>&nbsp;
+<b class="fc"><i class="no-highlight">38</i>&nbsp;        return numMoves;</b>
+<i class="no-highlight">39</i>&nbsp;
+<i class="no-highlight">40</i>&nbsp;    }
+<i class="no-highlight">41</i>&nbsp;}
+</div>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+        var codeBlock = document.getElementById('sourceCode');
+
+        if (codeBlock) {
+            hljs.highlightBlock(codeBlock);
+        }
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2022-06-30 18:43</div>
+</div>
+</body>
+</html>

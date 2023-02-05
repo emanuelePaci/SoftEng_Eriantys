@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="dawn" stylesheets="@../css/init.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Group>
+         <children>
+            <AnchorPane layoutX="100.0" layoutY="46.0" prefHeight="400.0" prefWidth="600.0">
+               <children>
+                  <Text fx:id="label" layoutX="130.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DO YOU WANT TO START A NEW GAME?" textAlignment="CENTER" wrappingWidth="339.8154296875">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="yesBtn" layoutX="125.0" layoutY="140.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="130.0" text="Yes">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="noBtn" layoutX="345.0" layoutY="140.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="130.0" text="No">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Text fx:id="playerNumber" layoutX="20.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EXPERT MODE" visible="false" x="30.0" y="200.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="expertMode" layoutX="20.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NUMBER OF PLAYERS" visible="false" x="30.0" y="60.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <RadioButton fx:id="players2" layoutX="300.0" layoutY="114.0" mnemonicParsing="false" selected="true" text="2" visible="false">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="toggle1" />
+                     </toggleGroup>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="players3" layoutX="400.0" layoutY="114.0" mnemonicParsing="false" text="3" toggleGroup="$toggle1" visible="false">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="expertNo" layoutX="300.0" layoutY="200.0" mnemonicParsing="false" selected="true" text="NO" visible="false">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="toggle2" />
+                     </toggleGroup>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="expertYes" layoutX="400.0" layoutY="200.0" mnemonicParsing="false" text="YES" toggleGroup="$toggle2" visible="false">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </RadioButton>
+                  <Button fx:id="createBtn" layoutX="185.0" layoutY="300.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="230.0" text="Create" visible="false">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <ListView fx:id="lobbyList" layoutX="100.0" layoutY="120.0" prefHeight="200.0" prefWidth="200.0" visible="false" />
+                  <Text fx:id="lobbySelection" layoutX="130.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LOBBY SELECTION" textAlignment="CENTER" visible="false" wrappingWidth="339.8154296875">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="numPlayer" layoutX="325.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PLAYERS:                          n.a." textAlignment="CENTER" visible="false" wrappingWidth="240.0">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="isExpert" layoutX="345.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EXPERT MODE:               n.a." textAlignment="CENTER" visible="false" wrappingWidth="206.0">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="enterBtn" layoutX="385.0" layoutY="224.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="120.0" text="Enter Lobby" visible="false">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="newGameBtn" layoutX="385.0" layoutY="294.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="120.0" text="NewGame" visible="false">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="refreshBtn" layoutX="100.0" layoutY="320.0" mnemonicParsing="false" prefHeight="10.0" prefWidth="200.0" text="Refresh" visible="false">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </Group>
+   </children>
+</StackPane>

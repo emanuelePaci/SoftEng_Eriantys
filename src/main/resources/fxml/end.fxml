@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<StackPane prefHeight="720.0" prefWidth="1280.0" styleClass="menuBackground" stylesheets="@../css/init.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Group>
+         <children>
+            <AnchorPane fx:id="rootPane" prefHeight="720.0" prefWidth="1280.0">
+                    <Button fx:id="yesBtn" layoutX="190.0" layoutY="450.0" mnemonicParsing="false" prefHeight="140.0" prefWidth="400.0" styleClass="smallButton" visible="false">
+                        <font>
+                            <Font size="14.0" />
+                        </font>
+                        <cursor>
+                            <Cursor fx:constant="HAND" />
+                        </cursor>
+                    </Button>
+                    <Button fx:id="noBtn" layoutX="690.0" layoutY="450.0" mnemonicParsing="false" prefHeight="140.0" prefWidth="400.0" styleClass="smallButton" visible="false">
+                        <font>
+                            <Font size="14.0" />
+                        </font>
+                        <cursor>
+                            <Cursor fx:constant="HAND" />
+                        </cursor>
+                    </Button>
+                    <ImageView fitHeight="265.0" fitWidth="500.0" layoutX="390.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                            <Image url="@../photos/eriantys_text_logo.png" />
+                        </image>
+                    </ImageView>
+               <Text fx:id="winner" fill="WHITE" layoutX="500.0" layoutY="300.0" stroke="RED" strokeLineCap="ROUND" strokeLineJoin="BEVEL" strokeType="OUTSIDE" strokeWidth="2.0" text="Lollo and Marco HAVE WON" visible="false">
+                  <font>
+                     <Font name="System Bold" size="60.0" />
+                  </font>
+               </Text>
+               <Text fx:id="draw" fill="WHITE" layoutX="560.75" layoutY="240.0" stroke="RED" strokeLineCap="ROUND" strokeLineJoin="BEVEL" strokeType="OUTSIDE" strokeWidth="2.0" text="It's a DRAW!" visible="false">
+                  <font>
+                     <Font size="30.0" />
+                  </font>
+               </Text>
+               <ImageView fx:id="newGame" fitHeight="150.0" fitWidth="722.0" layoutX="279.0" layoutY="375.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                  <image>
+                     <Image url="@../photos/text/NewGame.png" />
+                  </image>
+                  <effect>
+                     <DropShadow height="68.44" radius="33.72" spread="0.48" width="68.44">
+                        <color>
+                           <Color red="0.046296294778585434" green="0.3006172776222229" blue="1.0" />
+                        </color>
+                     </DropShadow>
+                  </effect>
+               </ImageView>
+               <ImageView fx:id="yes" fitHeight="71.0" fitWidth="98.0" layoutX="341.0" layoutY="485.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true" visible="false">
+                  <image>
+                     <Image url="@../photos/text/Yes.png" />
+                  </image>
+               </ImageView>
+               <ImageView fx:id="no" fitHeight="62.0" fitWidth="89.0" layoutX="847.0" layoutY="489.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true" visible="false">
+                  <image>
+                     <Image url="@../photos/text/No.png" />
+                  </image>
+               </ImageView>
+                </AnchorPane>
+         </children>
+      </Group>
+   </children>
+</StackPane>

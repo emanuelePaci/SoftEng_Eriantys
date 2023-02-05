@@ -1,0 +1,182 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <title>Coverage Report > Cloud</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/highlight-idea.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">it.polimi.ingsw.model.table</a>
+</div>
+
+<h1>Coverage Summary for Class: Cloud (it.polimi.ingsw.model.table)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">Cloud</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (6/6)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (17/17)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<div class="sourceCode" id="sourceCode"><i class="no-highlight">1</i>&nbsp;package it.polimi.ingsw.model.table;
+<i class="no-highlight">2</i>&nbsp;
+<i class="no-highlight">3</i>&nbsp;import it.polimi.ingsw.model.enumerations.PawnColor;
+<i class="no-highlight">4</i>&nbsp;import it.polimi.ingsw.model.pawns.Student;
+<i class="no-highlight">5</i>&nbsp;
+<i class="no-highlight">6</i>&nbsp;import java.util.*;
+<i class="no-highlight">7</i>&nbsp;
+<i class="no-highlight">8</i>&nbsp;/**
+<i class="no-highlight">9</i>&nbsp; *The cloud containing the students to choose at the end of player&#39;s turn.
+<i class="no-highlight">10</i>&nbsp; */
+<i class="no-highlight">11</i>&nbsp;public class Cloud {
+<i class="no-highlight">12</i>&nbsp;    private List&lt;Student&gt; cloudStudent;
+<i class="no-highlight">13</i>&nbsp;
+<i class="no-highlight">14</i>&nbsp;    /**
+<i class="no-highlight">15</i>&nbsp;     * Constructor.
+<i class="no-highlight">16</i>&nbsp;     * Instantiates this cloud initializing its list of the students.
+<i class="no-highlight">17</i>&nbsp;     */
+<b class="fc"><i class="no-highlight">18</i>&nbsp;    public Cloud(){</b>
+<b class="fc"><i class="no-highlight">19</i>&nbsp;        cloudStudent = new LinkedList&lt;&gt;();</b>
+<i class="no-highlight">20</i>&nbsp;    }
+<i class="no-highlight">21</i>&nbsp;
+<i class="no-highlight">22</i>&nbsp;    /**
+<i class="no-highlight">23</i>&nbsp;     * Gets the list of the students present on this cloud.
+<i class="no-highlight">24</i>&nbsp;     * @return the list of the students on this cloud.
+<i class="no-highlight">25</i>&nbsp;     */
+<i class="no-highlight">26</i>&nbsp;    public List&lt;Student&gt; getCloudStudent() {
+<b class="fc"><i class="no-highlight">27</i>&nbsp;        return cloudStudent;</b>
+<i class="no-highlight">28</i>&nbsp;    }
+<i class="no-highlight">29</i>&nbsp;
+<i class="no-highlight">30</i>&nbsp;    /**
+<i class="no-highlight">31</i>&nbsp;     * Appends all the students of the specified list to cloudStudent.
+<i class="no-highlight">32</i>&nbsp;     * @param toAdd the list of students to add.
+<i class="no-highlight">33</i>&nbsp;     */
+<i class="no-highlight">34</i>&nbsp;    public void addStudent(List&lt;Student&gt; toAdd)
+<i class="no-highlight">35</i>&nbsp;    {
+<b class="fc"><i class="no-highlight">36</i>&nbsp;            cloudStudent.addAll(toAdd);</b>
+<i class="no-highlight">37</i>&nbsp;    }
+<i class="no-highlight">38</i>&nbsp;
+<i class="no-highlight">39</i>&nbsp;    /**
+<i class="no-highlight">40</i>&nbsp;     * Counts the number of students of each color present on this cloud.
+<i class="no-highlight">41</i>&nbsp;     * @return the array, ordered by PawnColor&#39;s index, where each cell contains the number of students of each color present on this cloud.
+<i class="no-highlight">42</i>&nbsp;     */
+<i class="no-highlight">43</i>&nbsp;    public Integer[] countAll(){
+<b class="fc"><i class="no-highlight">44</i>&nbsp;        Integer[] colorsCount = new Integer[5];</b>
+<i class="no-highlight">45</i>&nbsp;
+<b class="fc"><i class="no-highlight">46</i>&nbsp;        for (PawnColor p : PawnColor.values())</b>
+<b class="fc"><i class="no-highlight">47</i>&nbsp;            colorsCount[p.getIndex()] = countStudent(p);</b>
+<i class="no-highlight">48</i>&nbsp;
+<b class="fc"><i class="no-highlight">49</i>&nbsp;        return colorsCount;</b>
+<i class="no-highlight">50</i>&nbsp;    }
+<i class="no-highlight">51</i>&nbsp;
+<i class="no-highlight">52</i>&nbsp;    /**
+<i class="no-highlight">53</i>&nbsp;     * Counts the number of students of the specified color present on this cloud.
+<i class="no-highlight">54</i>&nbsp;     * @param c the color of the students to count.
+<i class="no-highlight">55</i>&nbsp;     * @return the number of students of the specified color present on this cloud.
+<i class="no-highlight">56</i>&nbsp;     */
+<i class="no-highlight">57</i>&nbsp;    public int countStudent(PawnColor c){
+<b class="fc"><i class="no-highlight">58</i>&nbsp;        int count = 0;</b>
+<b class="fc"><i class="no-highlight">59</i>&nbsp;        for(Student s : cloudStudent){</b>
+<b class="fc"><i class="no-highlight">60</i>&nbsp;            if(s.getColor() == c){</b>
+<b class="fc"><i class="no-highlight">61</i>&nbsp;                count++;</b>
+<i class="no-highlight">62</i>&nbsp;            }
+<b class="fc"><i class="no-highlight">63</i>&nbsp;        }</b>
+<b class="fc"><i class="no-highlight">64</i>&nbsp;        return count;</b>
+<i class="no-highlight">65</i>&nbsp;    }
+<i class="no-highlight">66</i>&nbsp;    /**
+<i class="no-highlight">67</i>&nbsp;     * Removes and returns all the students present on this cloud.
+<i class="no-highlight">68</i>&nbsp;     * @return the list containing all the students present on this cloud.
+<i class="no-highlight">69</i>&nbsp;     */
+<i class="no-highlight">70</i>&nbsp;    public List&lt;Student&gt; removeAllStudent()
+<i class="no-highlight">71</i>&nbsp;    {
+<b class="fc"><i class="no-highlight">72</i>&nbsp;        List&lt;Student&gt; removed = new LinkedList&lt;&gt;(cloudStudent);</b>
+<b class="fc"><i class="no-highlight">73</i>&nbsp;        cloudStudent.clear();</b>
+<b class="fc"><i class="no-highlight">74</i>&nbsp;        return removed;</b>
+<i class="no-highlight">75</i>&nbsp;    }
+<i class="no-highlight">76</i>&nbsp;
+<i class="no-highlight">77</i>&nbsp;}
+</div>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+        var codeBlock = document.getElementById('sourceCode');
+
+        if (codeBlock) {
+            hljs.highlightBlock(codeBlock);
+        }
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2022-06-30 18:43</div>
+</div>
+</body>
+</html>

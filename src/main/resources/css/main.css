@@ -1,0 +1,164 @@
+.menuBackground {
+    -fx-background-image: url("../photos/MainBackground.jpg");
+    -fx-background-size: cover;
+}
+
+.board {
+    -fx-background-image: url("../photos/Plancia_DEF2.png");
+    -fx-background-size: cover;
+}
+
+.blue {
+    -fx-background-image: url("../photos/students/student_blue.png");
+    -fx-background-size: cover;
+}
+.yellow {
+    -fx-background-image: url("../photos/students/student_yellow.png");
+    -fx-background-size: cover;
+}
+.red {
+    -fx-background-image: url("../photos/students/student_red.png");
+    -fx-background-size: cover;
+}
+.green {
+    -fx-background-image: url("../photos/students/student_green.png");
+    -fx-background-size: cover;
+}
+.pink {
+    -fx-background-image: url("../photos/students/student_pink.png");
+    -fx-background-size: cover;
+}
+
+.cloud1{
+    -fx-background-image: url("../photos/clouds/cloud.png");
+    -fx-background-size: cover;
+}
+.cloud2{
+    -fx-background-image: url("../photos/clouds/cloud.png");
+    -fx-background-size: cover;
+}
+.cloud3{
+    -fx-background-image: url("../photos/clouds/cloud.png");
+    -fx-background-size: cover;
+}
+
+.assistant1{
+    -fx-background-image: url("../photos/assistants/Animali1.png");
+    -fx-background-size: cover;
+}
+.assistant2{
+    -fx-background-image: url("../photos/assistants/Animali2.png");
+    -fx-background-size: cover;
+}
+.assistant3{
+    -fx-background-image: url("../photos/assistants/Animali3.png");
+    -fx-background-size: cover;
+}
+.assistant4{
+    -fx-background-image: url("../photos/assistants/Animali4.png");
+    -fx-background-size: cover;
+}
+.assistant5{
+    -fx-background-image: url("../photos/assistants/Animali5.png");
+    -fx-background-size: cover;
+}
+.assistant6{
+    -fx-background-image: url("../photos/assistants/Animali6.png");
+    -fx-background-size: cover;
+}
+.assistant7{
+    -fx-background-image: url("../photos/assistants/Animali7.png");
+    -fx-background-size: cover;
+}
+.assistant8{
+    -fx-background-image: url("../photos/assistants/Animali8.png");
+    -fx-background-size: cover;
+}
+.assistant9{
+    -fx-background-image: url("../photos/assistants/Animali9.png");
+    -fx-background-size: cover;
+}
+.assistant10{
+    -fx-background-image: url("../photos/assistants/Animali10.png");
+    -fx-background-size: cover;
+}
+
+.monk{
+    -fx-background-image: url("../photos/characters/CarteTOT_front.jpg");
+    -fx-background-size: cover;
+}
+.herald{
+    -fx-background-image: url("../photos/characters/CarteTOT_front2.jpg");
+    -fx-background-size: cover;
+}
+.magic_delivery_man{
+    -fx-background-image: url("../photos/characters/CarteTOT_front3.jpg");
+    -fx-background-size: cover;
+}
+.grandmother_herbs{
+    -fx-background-image: url("../photos/characters/CarteTOT_front4.jpg");
+    -fx-background-size: cover;
+}
+.centaur{
+    -fx-background-image: url("../photos/characters/CarteTOT_front5.jpg");
+    -fx-background-size: cover;
+}
+.jester{
+    -fx-background-image: url("../photos/characters/CarteTOT_front6.jpg");
+    -fx-background-size: cover;
+}
+.knight{
+    -fx-background-image: url("../photos/characters/CarteTOT_front7.jpg");
+    -fx-background-size: cover;
+}
+.mushroom_hunter{
+    -fx-background-image: url("../photos/characters/CarteTOT_front8.jpg");
+    -fx-background-size: cover;
+}
+.minstrel{
+    -fx-background-image: url("../photos/characters/CarteTOT_front9.jpg");
+    -fx-background-size: cover;
+}
+.spoiled_princess{
+    -fx-background-image: url("../photos/characters/CarteTOT_front10.jpg");
+    -fx-background-size: cover;
+}
+.thief{
+    -fx-background-image: url("../photos/characters/CarteTOT_front11.jpg");
+    -fx-background-size: cover;
+}
+.farmer{
+    -fx-background-image: url("../photos/characters/CarteTOT_front12.jpg");
+    -fx-background-size: cover;
+}
+
+.white{
+    -fx-background-image: url("../photos/towers/white_tower.png");
+    -fx-background-size: cover;
+}
+.black{
+    -fx-background-image: url("../photos/towers/black_tower.png");
+    -fx-background-size: cover;
+}
+.grey{
+    -fx-background-image: url("../photos/towers/grey_tower.png");
+    -fx-background-size: cover;
+}
+
+.doNotEnter{
+    -fx-background-image: url("../photos/deny_island_icon.png");
+    -fx-background-size: cover;
+}
+
+.island1{
+    -fx-background-image: url("../photos/islands/island1.png");
+    -fx-background-size: cover;
+}
+.island2{
+    -fx-background-image: url("../photos/islands/island2.png");
+    -fx-background-size: cover;
+}
+.island3{
+    -fx-background-image: url("../photos/islands/island3.png");
+    -fx-background-size: cover;
+}

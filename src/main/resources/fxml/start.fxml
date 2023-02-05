@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="dawn" stylesheets="@../css/init.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Group>
+         <children>
+            <AnchorPane layoutY="1.0" prefHeight="400.0" prefWidth="600.0">
+               <children>
+                  <Text fx:id="serverIpLabel" layoutX="180.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="INSERT SERVER IP" textAlignment="CENTER" wrappingWidth="239.8154296875">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </Text>
+                  <Button fx:id="joinBtn" layoutX="185.0" layoutY="300.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="230.0" text="Join">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <TextField fx:id="serverIpField" alignment="CENTER" layoutX="160.0" layoutY="90.0" prefHeight="50.0" prefWidth="280.0" promptText="127.0.0.1">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </TextField>
+                  <Text fx:id="serverIpLabel1" layoutX="180.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="INSERT SERVER PORT" textAlignment="CENTER" wrappingWidth="239.8154296875">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </Text>
+                  <TextField fx:id="serverIpField1" alignment="CENTER" layoutX="160.0" layoutY="220.0" prefHeight="50.0" prefWidth="280.0" promptText="8080">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </TextField>
+               </children>
+            </AnchorPane>
+         </children>
+      </Group>
+   </children>
+</StackPane>

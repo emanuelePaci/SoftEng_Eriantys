@@ -1,0 +1,166 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <title>Coverage Report > ProfessorTable</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/highlight-idea.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">it.polimi.ingsw.model.board</a>
+</div>
+
+<h1>Coverage Summary for Class: ProfessorTable (it.polimi.ingsw.model.board)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">ProfessorTable</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (5/5)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (10/10)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<div class="sourceCode" id="sourceCode"><i class="no-highlight">1</i>&nbsp;package it.polimi.ingsw.model.board;
+<i class="no-highlight">2</i>&nbsp;
+<i class="no-highlight">3</i>&nbsp;import it.polimi.ingsw.model.enumerations.PawnColor;
+<i class="no-highlight">4</i>&nbsp;import it.polimi.ingsw.model.pawns.Professor;
+<i class="no-highlight">5</i>&nbsp;import it.polimi.ingsw.listeners.ModelListener;
+<i class="no-highlight">6</i>&nbsp;
+<i class="no-highlight">7</i>&nbsp;import java.util.LinkedList;
+<i class="no-highlight">8</i>&nbsp;
+<i class="no-highlight">9</i>&nbsp;/**
+<i class="no-highlight">10</i>&nbsp; * Professor Table class
+<i class="no-highlight">11</i>&nbsp; */
+<i class="no-highlight">12</i>&nbsp;public class ProfessorTable {
+<i class="no-highlight">13</i>&nbsp;    private LinkedList&lt;Professor&gt; professors;
+<i class="no-highlight">14</i>&nbsp;
+<b class="fc"><i class="no-highlight">15</i>&nbsp;    private ModelListener modelListener=null;</b>
+<i class="no-highlight">16</i>&nbsp;
+<i class="no-highlight">17</i>&nbsp;    /**
+<i class="no-highlight">18</i>&nbsp;     * Constructor
+<i class="no-highlight">19</i>&nbsp;     * Initialize the professors list
+<i class="no-highlight">20</i>&nbsp;     */
+<b class="fc"><i class="no-highlight">21</i>&nbsp;    public  ProfessorTable(){</b>
+<b class="fc"><i class="no-highlight">22</i>&nbsp;        professors = new LinkedList&lt;&gt;();</b>
+<i class="no-highlight">23</i>&nbsp;    }
+<i class="no-highlight">24</i>&nbsp;
+<i class="no-highlight">25</i>&nbsp;    /**
+<i class="no-highlight">26</i>&nbsp;     * Returns the professors list
+<i class="no-highlight">27</i>&nbsp;     * @return the professors list
+<i class="no-highlight">28</i>&nbsp;     */
+<i class="no-highlight">29</i>&nbsp;    public LinkedList&lt;Professor&gt; getProfessors() {
+<b class="fc"><i class="no-highlight">30</i>&nbsp;        return professors;</b>
+<i class="no-highlight">31</i>&nbsp;    }
+<i class="no-highlight">32</i>&nbsp;
+<i class="no-highlight">33</i>&nbsp;    /**
+<i class="no-highlight">34</i>&nbsp;     * removes a professor from the list
+<i class="no-highlight">35</i>&nbsp;     * @param p the professor to be removed
+<i class="no-highlight">36</i>&nbsp;     */
+<i class="no-highlight">37</i>&nbsp;    public void removeProfessor(Professor p){
+<b class="fc"><i class="no-highlight">38</i>&nbsp;        professors.remove(p);</b>
+<i class="no-highlight">39</i>&nbsp;    }
+<i class="no-highlight">40</i>&nbsp;
+<i class="no-highlight">41</i>&nbsp;    /**
+<i class="no-highlight">42</i>&nbsp;     * adds a professor to the list
+<i class="no-highlight">43</i>&nbsp;     * @param p the professor to be added
+<i class="no-highlight">44</i>&nbsp;     */
+<i class="no-highlight">45</i>&nbsp;    public void addProfessor(Professor p){
+<b class="fc"><i class="no-highlight">46</i>&nbsp;        professors.addLast(p);</b>
+<i class="no-highlight">47</i>&nbsp;    }
+<i class="no-highlight">48</i>&nbsp;
+<i class="no-highlight">49</i>&nbsp;    /**
+<i class="no-highlight">50</i>&nbsp;     * find a professor of the indicated color
+<i class="no-highlight">51</i>&nbsp;     * @param color the color to be found
+<i class="no-highlight">52</i>&nbsp;     * @return the professor of the given color
+<i class="no-highlight">53</i>&nbsp;     */
+<i class="no-highlight">54</i>&nbsp;    public Professor find(PawnColor color){
+<b class="fc"><i class="no-highlight">55</i>&nbsp;        for(Professor p: professors)</b>
+<b class="fc"><i class="no-highlight">56</i>&nbsp;            if(p.getColor() == color){</b>
+<b class="fc"><i class="no-highlight">57</i>&nbsp;                return p;</b>
+<i class="no-highlight">58</i>&nbsp;            }
+<b class="fc"><i class="no-highlight">59</i>&nbsp;        return null;</b>
+<i class="no-highlight">60</i>&nbsp;    }
+<i class="no-highlight">61</i>&nbsp;}
+</div>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+        var codeBlock = document.getElementById('sourceCode');
+
+        if (codeBlock) {
+            hljs.highlightBlock(codeBlock);
+        }
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2022-06-30 18:43</div>
+</div>
+</body>
+</html>

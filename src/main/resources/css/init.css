@@ -1,0 +1,45 @@
+.menuBackground {
+    -fx-background-image: url("../photos/Eriantys_slider.jpg");
+    -fx-background-size: cover;
+    -fx-position: relative;
+}
+
+.smallButton {
+    -fx-font-family: 'LillyBelle';
+    -fx-font-size: 40;
+    -fx-text-fill: white;
+    -fx-background-image: url("../photos/Button.png");
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+    -fx-label-padding: -3px 0 0 0;
+
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-background-radius: 0;
+    -fx-background-color: transparent;
+
+    -fx-cursor: hand;
+    -fx-opacity: 1;
+}
+
+.style{
+    -fx-font-family: 'LillyBelle';
+    -fx-font-size: 40;
+    -fx-text-fill: white;
+}
+
+.audio{
+    -fx-background-image: url("../photos/media/audio.png");
+    -fx-background-size: cover;
+}
+
+.noAudio{
+    -fx-background-image: url("../photos/media/noAudio.png");
+    -fx-background-size: cover;
+}
+
+.dawn{
+    -fx-background-image: url("../photos/dawn.jpeg");
+    -fx-background-size: cover;
+    -fx-position: relative;
+}
