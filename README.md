@@ -109,6 +109,6 @@ Some of the Characters are playable instantly, other ones requires the player to
 
 
 ## About us
-* Paci Emanuele ([@emanuelePaci](https://github.com/emanuelePaci))
-* Paleari Lorenzo ([@LorenzoPaleari](https://github.com/LorenzoPaleari))
-* Puppinato Thomas ([@PuppinatoThomas](https://github.com/PuppinatoThomas))
+* [Paci Emanuele](https://github.com/emanuelePaci)
+* [Paleari Lorenzo](https://github.com/LorenzoPaleari)
+* [Puppinato Thomas](https://github.com/PuppinatoThomas)
